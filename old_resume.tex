@@ -1,0 +1,296 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,palatine]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{black}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+
+\usepackage{ragged2e}
+% if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\usepackage{multicol}
+\usepackage{url}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{Deepa}{Tilwani}
+% \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+%\address{\faMapMarker\enspace  26D, Building H, Dachong City Garden, Nanshan District,}{Shenzhen, Guangdong Province, China (100190)}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+1(803) 477-4526}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{dtilwani@mailbox.sc.edu}                               % optional, remove / comment the line if not wanted
+%\homepage{https://www.linkedin.com/in/deepa-tilwani-b758551a0}                         % optional, remove / comment the line if not wanted
+\extrainfo{\href{https://www.linkedin.com/in/deepa-tilwani-b758551a0}{Linkedin}    \href{https://tinyurl.com/3b3rerew}{Google Scholar}}              % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+  
+\newcommand*{\customcventry}[7][.25em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+  
+\setlength{\tabcolsep}{12pt}
+\renewcommand{\labelitemi}{\small$\bullet$}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+                        % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+%\vspace*{-23mm}
+%\begin{center}
+%\begin{tabular}{ c c } \underline{{dtilwani@mailbox.sc.edu}} &  \faMobile\enspace %\underline{+8034774526}\\  
+%\end{tabular}
+%\end{center}
+
+\section{EDUCATION BACKGROUND}
+{\customcventry{Aug. 2022 - Present}{Ph.D Student, Computer Science and Engineering, Artificial Intelligence Institute}{ University of South Carolina,}{Columbia, South Carolina, USA}{}{Co‐advised by Dr. Amit P. Sheth and Dr. Christian O’Reilly \\GPA: 3.58/4.0}}
+
+{\customcventry{Aug 2019 - May 2022}{M.tech, Computer Science and Engineering}{The LNM Institute of Information Technology}{Jaipur, Rajasthan, India} {}{}}
+ 
+{\customcventry{2014 - 2018} {B.tech, Computer Science and Engineering}{Govt. Women Engineering College (GWECA)}{Ajmer, Rajasthan, India}{}{}}
+
+\section{SKILLS}
+{\customcventry{}{Python, MATLAB, PyTorch, Keras, TensorFlow, Scikit-learn,
+    Seaborn,
+    NumPy,
+    Pandas, CUDA, GIT.}{Programming Languages and Frameworks:}{}{}{}}
+
+{\customcventry{}{Large Language Models, NeuroSymbolic AI,
+    Machine Learning,
+    Deep Learning, Signal Processing, EEG, MRI}{Technical Skills:}{}{}{}}
+
+    
+   
+    
+
+\section{PROFESSIONAL EXPERIENCE}
+{\customcventry{Jan. 2022-Present}{\textbf{Graduate Research Assistant}}{Artificial Intelligence Institute, University of South Carolina (AIISC)}{Columbia, SC, USA}{}{}}
+
+\setlength{\parskip}{0.5em}
+
+{\customcventry{September 2021 - June 2022}{\textbf{Visiting Researcher}}{Artificial Intelligence Institute, University of South Carolina}{Columbia, SC, USA}{}{}}
+
+ % Date(s)
+{\customcventry{October 2020 - August 2021}{\textbf{Remote Research Intern}}{Artificial Intelligence Institute, University of South Carolina}{Columbia, SC, USA}{}{}}
+
+{\customcventry{Jun. 2017 ‐ July. 2017}{\textbf{Summer Intern ‐ Web 
+
+\section{PUBLICATIONS}
+
+
+\textbf{Articles in Peer-Reviewed Journals}
+\begin{itemize}
+
+    \item \textbf{Tilwani, D.}, O'Reilly, C., Riccardi, N., Shalin, V. L., den Ouden, D. B., Fridriksson, J., \& Desai, R. H. (2025). 
+    Benchmarking machine learning models in lesion-symptom mapping for predicting language outcomes in stroke survivors.
+    \textit{Frontiers in Neuroimaging}, 4, 1573816.
+
+    \item Dalal, S., \textbf{Tilwani, D.}, Gaur, M., Jain, S., Shalin, V., \& Sheth, A. (2023). 
+    A cross attention approach to diagnostic explainability using clinical practice guidelines for depression. 
+    \textit{IEEE Journal of Biomedical and Health Informatics}, 29(2), 1333–1342. doi: 10.1109/JBHI.2024.3483577.
+
+    \item \textbf{Tilwani, D.}, Bradshaw, J., Sheth, A., \& O’Reilly, C. (2023).
+    ECG recordings as predictors of very early autism likelihood: A machine learning approach. 
+    \textit{Bioengineering}.
+
+    \item O’Reilly, C., Oruganti, S. D. R., \textbf{Tilwani, D.}, \& Bradshaw, J. (2023). 
+    Model-driven analysis of ECG using reinforcement learning. 
+    \textit{Bioengineering}.
+
+\end{itemize}
+
+
+\textbf{Articles in Peer-Reviewed Conferences}
+\begin{itemize}
+
+    \item Porwal, S., Patel, K. C., \textbf{Tilwani, D.}, \& Bansal, S. K. (2021). 
+    A comparative study and tool to early predict diabetes using various machine and deep learning based techniques.
+    In \textit{Emerging Trends in Data-Driven Computing and Communications (DDCIoT)}.
+
+\end{itemize}
+
+
+\textbf{Posters Accepted and Presented}
+\begin{itemize}
+
+    \item \textbf{Tilwani, D.}, Goswami, R., O'Reilly, C., Riccardi, N., Yang, X., Shalin, V., 
+    Shinkareva, S., Sheth, A., \& Desai, H. R. (2023). 
+    Predicting language outcomes from MRI post-stroke: A machine learning approach. 
+    Presented at \textit{Organization for Human Brain Mapping (OHBM)}, Montreal, Canada.
+
+    \item \textbf{Tilwani, D.}, O’Reilly, C., Bradshaw, J., \& Sheth, A. (2023). 
+    Interpretable machine learning for predicting the likelihood of autism from infant ECG recordings. 
+    Presented at \textit{SCAND Research Symposium}, Columbia, SC.
+
+\end{itemize}
+
+
+\section*{Articles Under Review}
+
+\begin{itemize}
+
+    \item \textbf{Tilwani, D.}, Saxena, Y., Sheth, A., \& Gaur, M.
+    REASON: Reference and Assertions for consistent evaluation of factual/non-factual sentences.
+    \textit{arXiv preprint}, arXiv:2405.02228. Submitted to ICLR 2025.
+    \url{https://arxiv.org/abs/2405.02228}
+
+     \item \textbf{Tilwani, D.}, Yang, X., Shinkareva, S. V., \& O'Reilly, C. Age-Dependent EEG Spectral Analysis of Emotional Arousal and Hedonic Valence During Narrative Listening. Abstract submitted to OHBM 2026.
+
+    \item Yang, X., \textbf{Tilwani, D.}, O'Reilly, C., \& Shinkareva, S.V.
+    Revising the Positivity Bias: Nonlinear Age Effects on Valence Perception across Adulthood.
+ Submitted to the 7th National Big Data Health Science Conference, Columbia, SC, USA.
+
+
+    \item Yang, X., \textbf{Tilwani, D.}, O'Reilly, C., \& Shinkareva, S.V.
+    Evaluating Large Language Models as Substitutes for Human Affective Ratings in Naturalistic Paradigms.
+    Submitted to \textit{IEEE Transactions on Affective Computation}.
+
+   
+
+
+\end{itemize}
+
+
+
+\section{AWARDS \& ACHIEVEMENTS}
+
+    	\begin{itemize}
+        \item 2025 Recipient of the 2025 University Travel Award (\$500) attendance at the International Conference on Advances in Signal Processing and Artificial Intelligence (ASPAI’ 2025).
+        \item 2025 AAAI-25 Student Scholarship Travel Award (\$1000).
+        \item 2024 EMNLP Diversity and Inclusion Travel Award (\$1000)
+        \item 2023 Trainee Best Research Presentation Winner (\$100) in the South Carolina Autism and Neurodevelopmental Disorders Consortium (SCAND) Symposium. 
+     \item  2023 Research Symposium Third Place Poster Award (\$200) at, College of Engineering and Computing, University of South Carolina.
+     
+          \item Sept 2021 Jayana Clerk Fellowship, (\$15000) For supporting my stay at AIISC as a Visiting Intern Columbia SC
+          \item Sept 2020 2nd Prize, (\$100) LINZ Ars Festival ‐ BR41N.IO Hackathon Linz
+          \item July 2020 2nd Prize, (\$300) BR41N.IO: Brain‐Computer Interface Designers Hackathon Austria
+
+          \item 2016 1st Place, Poster Presentation on AR and VR Technology GWECA
+          \item 2015 3rd Place, Coding Challenge: Toast to Code‐ C Language GWECA
+          \item 2012 Silver Prize, National Science Olympiad (NSO)
+          
+		\end{itemize}%
+    \section{Advising and Mentoring}
+    \begin{itemize}
+        \item Yash Saxena, Galgotias University, Greater Noida, 2023-Present.  \textbf{Project:} ``REASON: REference and Assertions for conSistent evaluatiOn of factual/non-factual seNtences''  
+        \item Nethra Gunti, B.Tech Student, IIIT SriCity, 2022. \textbf{Project:} ``Phase Shift Analysis in Autism Spectrum Disorder:  A Video-Based Study of Parent and Object Interactions"
+        \item  Sai Durga Rithvik Oruganti, BSE Student, University of South Carolina, 2022. \textbf{Project:} ``Phase Shift Analysis in Autism Spectrum Disorder: A Video-Based Study of Parent and Object Interactions"
+        
+    \end{itemize}
+
+\section{Teaching Experience}
+
+\begin{itemize}
+    \item Conducted instructional sessions on ``Introduction to Python", AIISC High School Summer Camp, 2023.
+    \item Teaching Assistant (2019-2021), The LNM Institute of Information Technology: Computer Network, Data Structure, Database Management System and Advance Programming lab work.
+    
+\end{itemize}
+    
+\section{Community Service}
+\textbf{Journal Reviewer}
+\begin{itemize}
+    \item Frontiers in Psychiatry, 2023.
+    \item Frontiers in Neuroimaging, 2023.
+    \item MDPI, Advanced Natural Language Processing and Machine Translation, 2023.
+\end{itemize}
+
+\textbf{Voluntary Experience}
+\begin{itemize}
+\item Coordinator, AIISC Retreat 2023. AIISC organized an annual meetup featuring a full-day program and poster presentations.
+\item Session Moderator, ACM KDD Workshop on Knowledge-infused Learning, 2023
+\item Coordinator, AIISC High School Summer Camp, 2023.
+\item Coordinator, AIISC Retreat 2022. AIISC organized an annual meetup featuring a full-day program and poster presentations.
+\item Student Member, AAAI (2022-Present).
+    %\item Website Developer, GWECA. Designed and managed a website with other team members for the college technical festival.
+\end{itemize}
+
+
+
+
+      
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
